@@ -1,8 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap");
-
+@font-face {
+  font-family: 'Jua';
+  src: url('fonts/Jua/Jua-Regular.ttf') format('truetype');
+}
 body {
   margin: 0;
   line-height: 1.5;
+  background-color: #f3f2f1;
 }
 
 body,
@@ -11,6 +15,7 @@ textarea,
 button {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
+  
 }
 
 * {
@@ -45,6 +50,55 @@ button {
     transform: rotate(360deg);
   }
 }
+.section-title{
+  flex:0 0 100%;
+  max-width: 100%;
+  margin-bottom: 60px;
+  padding:0 15px;
+}
+.section-title h1{
+  display: inline-block;
+  font-size: 40px;
+  color:#000000;
+  font-weight: 700;
+  margin:0;
+  position: relative;
+}
+/* 원본 요소의 실제 내용 바로 앞에 있는 스타일링 가능한 하위 유사 요소를 나타냄 */
+.section-title h1::before{
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 80px;
+  height: 3px;
+  background-color: #ff9800;
+}
+.btn-01{
+  background-color: #ff9800;
+  color: #ffffff;
+  border: 2px solid transparent;
+  padding: 10px 35px;
+  border-radius: 30px;
+  line-height: 1.5;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.5s ease;
+}
+.btn-01:hover{
+  background-color: transparent;
+  border-color: #ff9800;
+  color: #ff9800;
+}
+
+.btn-01:focus{
+  outline: none;
+}
+
 /*Header*/
 .header {
   position: absolute;
@@ -183,4 +237,106 @@ button {
   width: 25px;
   display: block;
   margin: 2px auto;
+}
+
+/* about section */
+.about-section{
+  padding: 80px 0 0;
+}
+.about-section .about-img{
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  padding: 0 15px;
+}
+.about-section .about-img .img-box{
+  position: relative;
+}
+.about-section .about-img .img-box .shape-02 {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  border: 2px solid #ff9800;
+  left: 30px;
+  top: 30px;
+  animation: ani01 5s linear infinite;
+}
+.about-section .about-img .img-box img{
+  width: 100%;
+  display: block;
+}
+.about-section .about-content{
+  flex:0 0 66.66%;
+  max-width: 66.66%;
+  padding: 0 15px;
+}
+.about-section .about-content{
+  margin-bottom: 30px;
+}
+.about-section .about-content p{
+  font-family: 'Jua';
+  font-size: 16px;
+  color: #555555;
+  line-height: 26px;
+  margin: 0;
+}
+.about-section .about-content .stats .stat-box{
+  flex: 0 0 25%;
+  max-width: 25%;
+  padding: 0 15px;
+  text-align: center;
+  margin-top: 30px;
+}
+.about-section .about-content .stats .stat-box h2{
+  font-size: 40px;
+  color: #000000;
+  margin: 0 0 5px;
+}
+.about-section .about-content .stats .stat-box h5{
+  font-size: 16px;
+  color: #555555;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.about-section .about-content .btn{
+  margin-top: 30px;
+}
+
+/* Tech Section */
+.skills-section{
+  padding: 80px 0 80px;
+}
+.skills-section .typeOfSkills{
+  flex:0 0 33.33%;
+  max-width: 33.33%;
+  padding:0 15px;
+  margin-top: 30px;
+}
+.skills-section .typeOfSkillsInner{
+  position: relative;
+}
+.skills-section .typeOfSkillsInner img{
+  width: 100%;
+  display: block;
+  transition: all 0.5s ease;
+}
+.skills-section .typeOfSkillsInner:hover img{
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+.skills-section .typeOfSkillsInner .overlay{
+  /* position: absolute; */
+  /* left: 0; */
+  /* top: 0; */
+  height: 100%;
+  width: 100%;
+  /* background-color: red; */
+  opacity: 0.6;
+  text-align: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+}
+.skills-section .typeOfSkillsInner .overlay h4{
+  font-size: 20px;
+  margin: 0;
+  transition: all 0.5s ease;
 }
