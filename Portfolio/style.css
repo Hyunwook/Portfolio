@@ -116,7 +116,6 @@ button {
   text-decoration: none;
   font-size: 30px;
   color: #ffffff;
-  text-transform: uppercase;
   font-weight: 900; /*폰트굵기*/
   letter-spacing: 2px; /*자간 조정*/
 }
@@ -150,7 +149,7 @@ button {
 /* home section */
 .home-section {
   min-height: 100vh; /*높이 같의 1/100 ex)브라우저 높이값이 900px일 때 1vh는 9px */
-  background-image: url("image/me.jpg");
+  background-image: url("image/main.jpg");
   background-size: cover;
   background-position: center;
   /*위치 지정 요소와, 그 자손 또는 하위 플렉스 아이템의 Z축 순서를 지정. 더 큰 z-index 값을 가진 요소가 작은 값의 요소 위를 덮는다*/
@@ -198,7 +197,7 @@ button {
 .home-section .home-content h4 {
   font-size: 20px;
   color: #ffffff;
-  margin: 0;
+  margin: 0; 
 }
 .home-section .home-content h1 {
   font-size: 40px;
@@ -241,12 +240,15 @@ button {
 
 /* about section */
 .about-section{
-  padding: 80px 0 0;
+  padding-left: 17%;
+  padding-top: 80px;
+  text-align: center;
+  display: inline-block;
 }
-.about-section .about-img{
+/* .about-section .about-img{
   flex: 0 0 33.33%;
   max-width: 33.33%;
-  padding: 0 15px;
+  padding: 0 0 5 5px;
 }
 .about-section .about-img .img-box{
   position: relative;
@@ -261,13 +263,14 @@ button {
   animation: ani01 5s linear infinite;
 }
 .about-section .about-img .img-box img{
-  width: 100%;
+  margin-top: 30%;
+  width: 70%;
   display: block;
-}
+}  */
 .about-section .about-content{
-  flex:0 0 66.66%;
-  max-width: 66.66%;
-  padding: 0 15px;
+  flex:30% 30%;
+  max-width: 80%;
+  /* padding: ; */
 }
 .about-section .about-content{
   margin-bottom: 30px;
@@ -278,24 +281,57 @@ button {
   color: #555555;
   line-height: 26px;
   margin: 0;
+  margin-bottom: 30px;
 }
+.about-section .about-content .stats{
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
 .about-section .about-content .stats .stat-box{
-  flex: 0 0 25%;
-  max-width: 25%;
-  padding: 0 15px;
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
   text-align: center;
+  padding: 0 15px;
+  /* background-color: red; */
+  margin-bottom: 30px;
+  /* 
+  padding: 0 15px;
   margin-top: 30px;
+  margin-right: 40px; */
+  /* height: 100%;
+  width: 100%;
+  
+  text-align: center;
+  justify-content: center;
+  display: block;
+  margin: auto; */
+}
+.about-section .about-content .stats .row .info-item{ 
+  background-color: red;
+  flex: 0 0 100%;
+}
+.about-section .about-content .stats .stat-box img{
+  /* float: left; */
+  /* margin-top: 10%; */
+  height: 30px;
 }
 .about-section .about-content .stats .stat-box h2{
-  font-size: 40px;
+  font-family: 'Jua';
+  font-size: 15px;
   color: #000000;
-  margin: 0 0 5px;
+   /*위 오른 아래 왼*/
+  /* display: inline; */
+  word-break: keep-all;
+  text-align: center;
 }
 .about-section .about-content .stats .stat-box h5{
-  font-size: 16px;
-  color: #555555;
-  font-weight: 600;
-  text-transform: uppercase;
+  font-family: 'Jua';
+  font-size: 15px;
+  font-weight: 400;
+  margin: auto;
+  word-break: keep-all;
+  text-align: center;
 }
 .about-section .about-content .btn{
   margin-top: 30px;
@@ -304,6 +340,9 @@ button {
 /* Tech Section */
 .skills-section{
   padding: 80px 0 80px;
+}
+.skills-section .section-title{
+  text-align: center;
 }
 .skills-section .typeOfSkills{
   flex:0 0 33.33%;
@@ -323,20 +362,64 @@ button {
   filter: grayscale(0);
   transform: scale(1.1);
 }
-.skills-section .typeOfSkillsInner .overlay{
-  /* position: absolute; */
-  /* left: 0; */
-  /* top: 0; */
-  height: 100%;
-  width: 100%;
-  /* background-color: red; */
-  opacity: 0.6;
-  text-align: center;
-  justify-content: center;
-  transition: all 0.5s ease;
-}
+
 .skills-section .typeOfSkillsInner .overlay h4{
   font-size: 20px;
   margin: 0;
   transition: all 0.5s ease;
+  text-align: center;
+}
+
+/* archiving section*/
+.archiving-section{
+  background-color: #000000;
+  padding-bottom: 20px;
+}
+.archiving-section .section-title{
+  text-align: center;
+}
+.archiving-section .section-title h1{
+  color: white;
+}
+.archiving-section .stats{
+flex: 0 0 100%;
+max-width: 100%;
+}
+.archiving{
+  margin-left: 100px;
+  background-color: white;
+  padding: 20 0 20 30px; /*위 오 아래 왼*/
+  border-radius: 30px;
+  line-height: 1.5;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+  transition: all 0.5s ease;
+  width: 35%;
+}
+.archiving:hover{
+  filter: grayscale(0);
+  transform: scale(1.04);
+}
+.archiving img{
+  width: 40%;
+  margin-bottom: 15px;
+}
+.archiving-section .stats .archiving h2{
+  margin-bottom: 15px;
+}
+.archiving-section .stats .archiving h2 a{
+  font-family: 'Jua';
+  font-size: 15px;
+  text-decoration: none;
+}
+.archiving-section .stats .archiving h5{
+  font-family: 'Jua';
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.archiving-section .stats .archiving li{
+  font-size: 13px;
+  margin-bottom: 5px;
 }
